@@ -1,0 +1,42 @@
+# Ignore all profiles except Admin and Standard
+force-app/main/default/profiles/*
+!force-app/main/default/profiles/Admin.profile-meta.xml
+!force-app/main/default/profiles/Standard.profile-meta.xml
+
+# Ignore managed package metadata
+**/installedPackages/**
+**/*/**__*        # Files with namespace prefixes like abc__MyComponent.cls
+
+# VSCode and system folders
+.vscode/
+.idea/
+.sfdx/
+.DS_Store
+Thumbs.db
+
+# Node.js and test folders
+node_modules/
+package-lock.json
+test-results/
+coverage/
+
+# Temporary/generated folders
+temp/
+output/
+pmd-output/
+
+# Ignore project scratch org definition (optional)
+config/project-scratch-def.json
+
+# Optional: Ignore translations and ExperienceBundle configs
+force-app/main/default/translations/*
+force-app/main/default/experiences/**/config/**
+
+# Optional: Ignore older versions of flows
+force-app/main/default/flows/**/*-1.flow-meta.xml
+
+# Optional: Ignore Jest snapshots from LWC tests
+**/__tests__/**/__snapshots__/
+**/jsconfig.json
+
+**/.eslintrc.json
